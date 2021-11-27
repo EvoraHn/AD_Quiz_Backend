@@ -26,7 +26,7 @@ const jwtMiddleware = passport.authenticate('jwt', {session:false});
 
 router.use(passport.initialize());
 
-var swotRouter = require('./swot/index');
+var VotacionesRouter = require('./Votaciones/index');
 var secRouter = require('./sec/index');
 var adRouter = require('./AntiDepresive/index');
 
@@ -36,7 +36,7 @@ router.get('/', (req, res, next)=>{
 );
 
 router.use('/sec', secRouter);
-router.use('/swot', jwtMiddleware ,swotRouter);
+router.use('/Votaciones', jwtMiddleware ,VotacionesRouter);
 router.use('/AntiDepresive', jwtMiddleware ,adRouter);
 /*
 router.get("/", (req, res, next) => {

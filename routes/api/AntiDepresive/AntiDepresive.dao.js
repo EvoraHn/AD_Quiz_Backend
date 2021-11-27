@@ -91,40 +91,6 @@ class Ad{
     let adDocument = await this.adColl.findOne(filter);
     return adDocument;
   }
-/*
-  //Editar Diagnostico con parametro de pregunta
-  async EditarPreguntaConParametro(id,Pregunta1,Pregunta) {
-    let filter = {"_id": new ObjectID(id)};
-    let updateJson = {
-      "$set" : {"?":Pregunta1}
-      //push para los arreglos
-    };
-    let result = await this.adColl.updateOne(filter, updateJson);
-    return result;
-  }*/
-
-  /* Codigo para front 
-
-<div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-4">
-  <div class="transform scale-110 -rotate-6">
-    1
-  </div>
-  <div class="col-start-3 transform scale-75 rotate-6 translate-x-2 translate-y-15">
-    2
-  </div>
-  <div class="transform scale-150 translate-y-11">
-    3
-  </div>
-  <div class="transform translate-y-24">
-    4
-  </div>
-  <div class="row-start-1 col-start-2 col-span-2 transform translate-x-20 translate-y-4">
-    5
-  </div>
-</div>
-
-
-  <div class="bg-gradient-to-br from-pink-500 to-rose-500"></div>*/
 
 }
 module.exports = Ad;
